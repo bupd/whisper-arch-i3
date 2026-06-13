@@ -4,9 +4,9 @@
 
 Add offline voice typing to this Arch + i3 + X11 setup:
 
-1. Press `Alt+Shift+m` to start recording.
+1. Press `Ctrl+\` to start recording.
 2. Speak in English.
-3. Press `Alt+Shift+m` again to stop.
+3. Press `Ctrl+\` again to stop.
 4. Whisper transcribes the recording.
 5. The transcript is typed into the currently focused input field.
 6. `dunstify` shows clear, good-looking status notifications throughout.
@@ -16,7 +16,7 @@ Add offline voice typing to this Arch + i3 + X11 setup:
 - OS: Arch Linux.
 - Session: X11.
 - Desktop/window manager: i3.
-- `$mod` in i3: `Mod1`, so `$mod+Shift+m` is `Alt+Shift+m`.
+- Voice typing hotkey: `Ctrl+\`, represented in i3 as `Control+backslash`.
 - Audio stack: PipeWire exposing PulseAudio compatibility.
 - Already available locally:
   - `i3`
@@ -126,10 +126,10 @@ Path:
 Add binding:
 
 ```i3
-bindsym $mod+Shift+m exec --no-startup-id ~/dotfiles/scripts/voice-type-toggle
+bindsym Control+backslash exec --no-startup-id ~/dotfiles/scripts/voice-type-toggle
 ```
 
-No existing conflict was found for `$mod+Shift+m`.
+No existing conflict was found for `Control+backslash`.
 
 ## Runtime Directory Layout
 
@@ -399,7 +399,7 @@ Reload i3:
 i3-msg reload
 ```
 
-Then test `Alt+Shift+m` in:
+Then test `Ctrl+\` in:
 
 - Browser input.
 - Terminal prompt.
@@ -420,7 +420,7 @@ Then test `Alt+Shift+m` in:
 
 ## Final Decision Summary
 
-- Hotkey: `Alt+Shift+m`.
+- Hotkey: `Ctrl+\`.
 - Language: English only.
 - Mode: toggle start/stop.
 - Engine: OpenAI Whisper.

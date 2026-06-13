@@ -2,7 +2,7 @@
 
 Offline voice typing for Arch Linux + i3 + X11 using OpenAI Whisper.
 
-Press `Alt+Shift+m` to start recording. Press it again to stop, transcribe, and type the text into the focused input field.
+Press `Ctrl+\` to start recording. Press it again to stop, transcribe, and type the text into the focused input field.
 
 ## Requirements
 
@@ -23,7 +23,7 @@ sudo pacman -S dunst
 Add this to your i3 config:
 
 ```i3
-bindsym $mod+Shift+m exec --no-startup-id /home/bupdlap/dotfiles/whisper-arch-i3/voice-type-toggle
+bindsym Control+backslash exec --no-startup-id /home/bupdlap/dotfiles/whisper-arch-i3/voice-type-toggle
 ```
 
 Then reload i3:
